@@ -41,4 +41,4 @@ const bottle = {
 };
 
 console.log(water);
-console.log(bottle.content);
+console.log("Der Inhalt der Flasche ist" , bottle["content"]);
