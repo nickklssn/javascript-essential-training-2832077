@@ -1,8 +1,37 @@
-/**
- * Practice: Making classes and objects
- *
- * - Find a type of object you have more than one of in your house (eg. clothing, writing tools, etc).
- * - Create a class describing this object type - its properties and methods.
- * - Create several objects using the class.
- * - Test the objecs by calling their properties and using their methods in the console.
- */
+import Backpack from "./Backpack.js";
+import Bottle from "./Bottle.js";
+
+const waterBottle = new Bottle(
+    "Mineau",
+    "water",
+    500,
+    "Plastic",
+    false
+);
+
+const colaBottle = new Bottle(
+    "Coca-Cola",
+    "cola",
+    1500,
+    "Plastic",
+    true
+);
+
+const everyBackpack = new Backpack(
+    "test",
+    200,
+    "grey",
+    5,
+    2,
+    2,
+    "yes"
+);
+
+console.log(everyBackpack.color);
+everyBackpack.color = "black";
+console.log(everyBackpack.color);
+everyBackpack.lidOpen
+console.log(waterBottle);
+console.log(waterBottle.FilledOrNot("yes"));
+waterBottle.FilledOrNot = "no";
+console.log(waterBottle.FilledOrNot);
