@@ -60,3 +60,32 @@ newArticle.setAttribute("id", "everyday");
 newArticle.innerHTML = content;
 
 main.append(newArticle);
+
+
+const newNavigation = document.createElement("nav");
+const listStart = document.createElement("ul");
+const element1 = document.createElement("li");
+const element2 = document.createElement("li");
+const element3 = document.createElement("li");
+const element4 = document.createElement("li");
+const element5 = document.createElement("li");
+
+listStart.appendChild(element1);
+listStart.appendChild(element2);
+listStart.appendChild(element3);
+listStart.appendChild(element4);
+listStart.appendChild(element5);
+
+main.appendChild(listStart);
+main.appendChild(element1);
+main.appendChild(element2);
+main.appendChild(element3);
+main.appendChild(element4);
+main.appendChild(element5);
+
+
+newNavigation.classList.add("navigation");
+newNavigation.setAttribute("id", "nav");
+newNavigation.innerHTML = content;
+
+main.insertBefore(newArticle);

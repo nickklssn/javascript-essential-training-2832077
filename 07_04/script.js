@@ -8,4 +8,24 @@
  * - Remove the item you found using the find method from the array.
  */
 
+const array = ["Starlight", "Nick", "Homelander", "Benjamin", "Sarah", "Stormfront", "The Deep", "Butcher"];
+console.log(array);
+//console.log(array.pop());
+
+
+/* var butcherFirst = array.pop()
+array.unshift(butcherFirst);
+console.log(array); */
+
+/* array.sort();
+console.log(array); */
+
+/* const nick = array.includes("Nick");
+console.log(nick); */
+
+
+const indexOfElement = array.indexOf("The Deep")
+array.splice(indexOfElement, 1);
+console.log(array);
+
 
