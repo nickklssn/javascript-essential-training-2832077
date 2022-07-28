@@ -57,3 +57,41 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+/**
+ * Practice: Pass values between functions
+ *
+ * Create two functions:
+ * - Main function
+ *  - Creates new <article> element
+ *  - Populates <article> with content (see const content below)
+ *  - Returns <article> element to where function is called
+ * - Helper image function
+ *  - Creates new <figure> element
+ *  - Adds <img> markup pointing to frogpack.image
+ *  - Adds <figcaption> element with image description
+ *  - Returns <figure> element to where function is called
+ */
+const helperImage = (someObject) => {
+
+  let figure = document.createElement("figure");
+  let pointerImage = document.createElement("img");
+  pointerImage.setAttribute("src", someObject.image);
+  let figcaption = document.createElement("figcaption");
+  figcaption.innerHTML = someObject.name;
+  figure.append(pointerImage, figcaption);
+  return figure;
+
+}
+
+const newArticle = (frogpack) => {
+
+  let article = document.createElement("article");
+  article.innerText = content;
+  article.prepend(helperImage(frogpack));
+  return article;
+}
+
+document.querySelector("main").append(newArticle(frogpack));
+
+
